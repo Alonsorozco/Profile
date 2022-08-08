@@ -6,14 +6,12 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Fabian Salas</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -39,7 +37,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://www.linkedin.com/in/fabiansalasorozco/">Mi Linkedin</a></li>
                     
                     <li class="pt-3"> Qr para compartir esta pagina</li>
-                    <li><%= image_tag("qr.jpg", :alt => "rss feed", :class => "w-25 pt-3 img-fluid img-thumbnail " )%></li>
+                    <li><%= image_tag("qr.jpg", :alt => "rss feed", :class => "w-25  img-fluid img-thumbnail " )%></li>
                 </ul>
 
                 
@@ -57,6 +55,8 @@
                         Fabian Alonso
                         <span class="text-primary"> Salas Orozco </span>
                     </h1>
+
+                    <%= link_to 'Solicita mi curriculum en PDF', new_contact_path %>
                     <div class="subheading mb-5">
                     
                     </div>
@@ -64,7 +64,6 @@
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/fabiansalasorozco/"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/Alonsorozco"><i class="fab fa-github"></i></a>
-            
                     </div>
                 </div>
             </section>
@@ -296,7 +295,8 @@
 
                 </div>
             </section>
-            
+
+
 
     <!--Section contactos-->
 <div data-tf-popover="xdmf1Tey" data-tf-button-color="#0445AF" data-tf-tooltip="Hola 👋&nbsp;&nbsp;en qué puedo ayudarte?" data-tf-chat data-tf-medium="snippet" style="all:unset;"></div><script src="//embed.typeform.com/next/embed.js"></script>
@@ -305,6 +305,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+  
     </body>
 </html>

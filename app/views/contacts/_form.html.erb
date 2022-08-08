@@ -1,0 +1,74 @@
+<div class="row mt-5">
+
+<%= link_to 'Volver', root_path, class:"btn  btn-info rounded-pill w-25 " %>
+
+</div>
+
+
+
+<div class="row">
+    <div class="container border mt-5 text w-50 shadow-lg p-3 mb-5 bg-body rounded">
+        <h5> Formulario de contacto ontacto</h5>
+        <form id="form">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="nombre" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Apellido</label>
+              <input type="text" class="form-control" placeholder="Apellido" name="last" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Telefono</label>
+                <input type="number" class="form-control" placeholder="telefono" name="phone" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Correo Electronico</label>
+                <input type="email" class="form-control" placeholder="Correo electronico" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mensaje</label>
+                <textarea type="email" class="form-control" placeholder="Correo electronico" name="message" required></textarea>
+            </div>
+
+            <input type="submit" class="btn btn-info mb-3 " id="button" value="Solicitar" >
+          </form>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+<script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('rJBcIsix9oWeRAQ3w')
+</script>
+
+<script> 
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+    .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn.value = 'Enviado...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_4ckejdb';
+
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+        btn.value = 'enviar mensaje';
+        alert('mensaje enviado correctamente');
+        }, (err) => {
+        btn.value = 'enviar mensaje';
+        alert(JSON.stringify(err));
+        });
+    });</script>
+
